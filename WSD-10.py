@@ -10,8 +10,6 @@ import json
 
 Base = declarative_base()
 engine = sqlalchemy.create_engine('postgres://postgres@/postgres')
-conn = engine.connect()
-conn.execute('commit')
 
 
 class User(Base):
@@ -64,8 +62,6 @@ for user in users:
 
 session.commit()
 session.close()
-conn.close()
-
 
 # app = Flask(__name__)
 #

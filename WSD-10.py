@@ -1,11 +1,12 @@
 import sqlalchemy
-
-from flask import Flask
 from sqlalchemy import Column, String, Integer, Float, ForeignKey
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+
 import requests
 import json
+
+from flask import Flask
 
 Base = declarative_base()
 engine = sqlalchemy.create_engine('postgres://postgres@/postgres')

@@ -2,14 +2,14 @@ from random import randint
 import json
 
 import sqlalchemy
-from sqlalchemy import Table, Column, String, Integer, Float, ForeignKey
+from sqlalchemy import Table, Column, ForeignKey, String, Integer, Float
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 import requests
 
-from flask import Flask
 import flask
+from flask import Flask
 
 Base = declarative_base()
 
